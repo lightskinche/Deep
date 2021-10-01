@@ -17,13 +17,11 @@ public class Main
     public static final String MODID = "deep";
     public static final String VERSION = "1.0";
     
-    static Item platiumingot = new PlatiumIngot();
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
     	//item and block registering
+        static Item platiumingot = new PlatiumIngot().setUnlocalizedName("platium_ingot").platiumingot.setTextureName("deep:platium_ingot");
         GameRegistry.registerItem(platiumingot, "platium_ingot");
-        platiumingot.setUnlocalizedName("platium_ingot");
-        platiumingot.setTextureName("deep:platium_ingot");
     }
     @EventHandler
     public void init(FMLInitializationEvent event)
